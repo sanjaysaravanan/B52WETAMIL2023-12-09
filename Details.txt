@@ -1,0 +1,69 @@
+
+Topics:
+
+  removeEventListener -- events can only be removed with named callback function & addeventlistner should also have the named callback function
+
+  options in eventListener:
+    once: boolean value to tell whether event should execute only once
+
+  2. Concepts in events
+
+    1. Propagation --> events propagate through inner <-> outer between related elements
+
+    Way of Propagation:
+      1. Default - Bubbling (inner to outer or child to parent) ---> propagation of events from innerMost child to outermost parent 
+      2. Capturing (outer to inner) ---> event progation of events from outermost parent to innermost child
+
+      stopProgation func for an event
+
+  
+  synchronous & asynchronous:
+
+    synchronous -> line - by - line exectution of statements
+
+    asynchronous --> some of the statements are put in separate queue to be executed after the synchronous statements are executed
+
+    Javascript is a single thread ( only sync lines are executed first )
+
+  Callback
+
+    callback function ---> a function reference/definition which is used an arguement to another function to execute a set of statements
+
+    sync operations exectution:
+      Eg: forEach, map, filter, find
+
+    async operations execution ( operation running in background )
+      Eg: setTimout ( wait for sometime to execute )
+          setInterval ( executes frequently after certain interval )
+          element.addEventListner(type, listern: callback);
+    
+    async operations are put into a queue after the wait time/ or completion of action.
+    then js grabs them from the callback queue for execution
+
+    use & purpose of the callback
+
+    callback advantages:
+      1. Modularity / Reusability
+      2. To keep track when to execute what statements as a callback in a asynchronous operation
+
+      asynchronous operation always go for named callback function to keep track
+
+    pain of callback
+      Callback Hell: Callback Hell is essentially nested callbacks stacked below one inside another forming a pyramid structure. Every callback depends/waits for the previous callback, thereby making a pyramid structure that affects the readability and maintainability of the code results in uncertainty
+
+  Example Task:
+
+    table creation
+
+    id, class, nested structure, keys to pass test case 
+
+    Discussion for Task
+      calculator:
+        use eval for infx expresiion valuation
+        eval('2+2*(2)');
+
+Task:
+  Day 15: https://docs.google.com/document/d/1K6jW6TPmqWvzoRAm2t-GlOAxKmMRsLt5zaCsdcH_3LM/edit
+  
+Next Session:
+  Form values using JS DOM accessing
